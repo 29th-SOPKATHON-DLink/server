@@ -54,6 +54,58 @@ router.get('/:id', require('./meetingChoiceGET'));
 router.post('/:id', require('./meetingClosePOST'));
 ```
 
+## 💻 package.json
+![image](https://user-images.githubusercontent.com/72644361/142741723-5fd8cf03-c711-4766-8b79-774c88296563.png)
+<br>
+```jsx
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase serve -p 5000 -o 127.0.0.1",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "cross-env NODE_ENV=production firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dayjs": "^1.10.7",
+    "dotenv": "^10.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.2.0",
+    "firebase-functions": "^3.11.0",
+    "helmet": "^4.6.0",
+    "hpp": "^0.2.3",
+    "lodash": "^4.17.21",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+
+```
+
+## 💻 ERD
+![image](https://user-images.githubusercontent.com/72644361/142742539-5baaa474-79d0-4dea-b9c5-d36660086200.png)
+
+## 💻 Table of Datagrip / Base URL / API명세서
+[💻 Here! ](https://www.notion.so/fruiting/TABLE-BASE-URL-API-db6a21692ae94572af2aa0f82d57a2ee)
+
+
+
 ------
 ## 👨‍👩‍👧‍👦 Developer & Role
 ![image](https://user-images.githubusercontent.com/72644361/142736053-462706af-a2ad-457e-bb1b-85d728a93d1e.png)
