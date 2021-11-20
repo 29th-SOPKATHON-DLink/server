@@ -15,4 +15,13 @@ module.exports = {
 
   // 프로필 조회
   READ_PROFILE_SUCCESS: '프로필 조회 성공',
-};
+
+  //번개 등록
+  NULL_TITLE: '번개 제목이 없습니다',
+  NULL_M_USER: '번개 참여자가 없습니다',
+  MEETING_FAIL: '번개 등록을 실패했습니다',
+
+  //랭크 
+  RANK_SUCCESS: "랭크 불러오기 성공",
+  RANK_FAIL: "랭크 불러오기 실패",
+}
