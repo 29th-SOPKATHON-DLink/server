@@ -42,9 +42,45 @@ const getAllRank = async (client) => {
   return convertSnakeToCamel.keysToCamel(rows);
 };
 
+const postTitleGET = async (client)=>{
+    const { rows } = await client.query(
+        `
+        SELECT title
+        FROM meeting, muser, "user" u
+        WHERE meeting.id=muser.mid AND muser.uid=u.id 
+        `,
+  
+      );
+    
+      return convertSnakeToCamel.keysToCamel(rows);
+  };
 
-module.exports = {
-  getAllAlcol,
+  
+  const postUserGET = async (client)=>{
+    const { rows } = await client.query(
+        `
+        SELECT u.uname
+        FROM meeting, muser, "user" u
+        WHERE meeting.id=muser.mid AND muser.uid=u.id
+        `,
+  
+      );
+    
+      return convertSnakeToCamel.keysToCamel(rows);
+  };
+  const countGET = async (client)=>{
+    const { rows } = await client.query(
+        `
+        SELECT COUNT(u.uname)-1 AS count
+        FROM meeting, muser, "user" u
+        WHERE meeting.id=muser.mid AND muser.uid=u.id
+        `,
+  
+      );
+    
+      return convertSnakeToCamel.keysToCamel(rows[0]);
+  };
+
+  module.exports = { getAllAlcol,
   UpdateSumTotal,
-  getAllRank
-};
+  getAllRank, postTitleGET, postUserGET, countGET };
